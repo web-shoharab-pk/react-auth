@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { UserContext } from '../../App';
 
 const Header = () => {
-    const [loggedInUser] = useContext(UserContext);
+    const [loggedInUser ] = useContext(UserContext);
     const history = useHistory();
     const handleLoginPage = () => {
         history.push('/login')
@@ -32,9 +32,11 @@ const Header = () => {
                             <li className="nav-item">
                                 <button onClick={handleLoginPage} type="button" className="btn btn-warning py-1 px-5 mx-5 fs-5 mt-1">
                                     {
-                                        loggedInUser ? `${loggedInUser.name}` : `Login`
-                                    }
+                                        loggedInUser.name ?  
+                                          `${loggedInUser.name} `    
+                                        :  "Login" 
 
+                                    }
                                 </button>
                             </li>
                         </ul>

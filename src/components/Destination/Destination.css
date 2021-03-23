@@ -1,0 +1,14 @@
+ form{
+     border: none;
+ }
+.destination{
+    background-color: white;
+    padding: 20px;
+}
+.pick-div{
+    background-color: #f0eeee;
+    border: none;
+}
+.pick-div input{
+    border-radius: 5px;
+}

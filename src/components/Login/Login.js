@@ -17,7 +17,7 @@ const Login = () => {
 
     const history = useHistory();
     const location = useLocation();
-    const { from } = location.state || { from: { pathname: "/" } };
+    const { from } = location.state || { from: { pathname: "/destination" } };
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
 
@@ -73,8 +73,7 @@ const Login = () => {
                 // The signed-in user info.
                 setLoggedInUser(signInUser);
                 history.replace(from);
-
-                // ...
+               // ...
             }).catch((error) => {
                 // Handle Errors here.
                 var errorCode = error.code;
