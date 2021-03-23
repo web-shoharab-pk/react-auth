@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,34 +11,40 @@ import fakedata from './components/FakeData/FakeData.js'
 import Destination from './components/Destination/Destination';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUP/SignUp';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   console.log(fakedata);
   return (
     <div className="App">
-      <Router>
-        <Header />
-        <Switch>
-          <Route path="/destination/:ticketCategory">
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+        <Router>
+          <Header />
+          <Switch>
+            <PrivateRoute path="/destination/:ticketCategory">
               <Destination />
-          </Route>
-          <Route path="/destination">
+            </PrivateRoute>
+            <PrivateRoute path="/destination">
               <Destination />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signUp">
-            <SignUp />
-          </Route>
-          <Route path="/">
-            {/* {
+            </PrivateRoute>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/signUp">
+              <SignUp />
+            </Route>
+            <Route path="/">
+              {/* {
               fakedata.map(data => <Home data={data} />)
             } */}
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
+      </UserContext.Provider>
     </div>
   );
 }

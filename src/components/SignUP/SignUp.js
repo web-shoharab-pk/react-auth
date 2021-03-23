@@ -10,7 +10,7 @@ const SignUp = () => {
         console.log("clicked");
     }
     return (
-        <div className="container">
+        <div className="container mt-5">
             <div className="row">
                 <div className="col-md-3">
                 </div>
@@ -18,11 +18,13 @@ const SignUp = () => {
                     <form action="">
                         <h1>Sign Up</h1>
                         <div>
-                        <input type="text" placeholder="Name" required />
+                            <input type="text" placeholder="Name" required />
                             <br /> <br />
                             <input type="email" placeholder="Email" required />
                             <br /> <br />
                             <input type="password" placeholder="Password" required />
+                            <br /> <br />
+                            <input type="password" placeholder="Confirm Password" required />
                             <br /> <br />
                             <input className="login-btn" type="submit" value="Sign Up" />
                         </div>

@@ -1,4 +1,6 @@
-
+.navbar-container{
+    border-bottom: 3px solid gray;
+}
 .navbar-container img{
     height: 80px;
 }
