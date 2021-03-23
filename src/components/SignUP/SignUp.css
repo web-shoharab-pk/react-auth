@@ -1,0 +1,33 @@
+.form-div{
+    background-color: white;
+   padding: 20px ;
+ }
+form{
+    border: 2px solid #999898;
+    box-sizing: border-box;
+   
+}
+form input{
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid gray;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.login-btn{
+    padding: 10px 0;
+    border: none;
+    color: white;
+    background-color: #fc793d;
+}
+.loginWithfg button{
+    width: 60%;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 25px;
+}
+.loginWithfg button img{
+    width: 40px;
+    margin-right: 40px;
+}

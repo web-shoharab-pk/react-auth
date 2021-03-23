@@ -1,6 +1,0 @@
- {"employees":[
-   {"ticketCategory":"one time ticket", "price":"$100"},
-   {"ticketCategory":"one day pass", "price":"$500"},
-   {"ticketCategory":"monthly pass", "price":"$1500"},
-   {"ticketCategory":"annual pass", "price":"$9000"}
- ]}

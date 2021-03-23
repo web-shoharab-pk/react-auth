@@ -1,9 +1,13 @@
 import React from 'react';
 import './Header.css'
 import logo from './../images/logo2.png'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Header = () => {
+    const history = useHistory();
+    const handleLoginPage = () => {
+        history.push('/login')
+    }
     return (
         <div className="container">
             <nav className="navbar navbar-container navbar-expand-lg navbar-dark ">
@@ -24,7 +28,7 @@ const Header = () => {
                                 <Link className="nav-link active mx-5 fs-4" to="/contact">Contact</Link>
                             </li>
                             <li className="nav-item">
-                            <button type="button" className="btn btn-warning mx-5 fs-5 mt-1">Login</button>
+                            <button onClick={handleLoginPage} type="button" className="btn btn-warning py-1 px-5 mx-5 fs-5 mt-1">Login</button>
                             </li>                          
                         </ul>
                     </div>

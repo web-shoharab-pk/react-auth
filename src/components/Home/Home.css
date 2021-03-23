@@ -1,0 +1,32 @@
+.images{
+    width: 100px;
+}
+.background{
+    color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    padding: 20px;
+    width: 100%;
+}
+.background h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+.ticket-div-1{
+    background-image: url('./../images/image1.png');
+}
+.ticket-div-2{
+    background-image: url('./../images/image2.png');
+}
+.ticket-div-3{
+    background-image: url('./../images/image3.png');
+}
+.ticket-div-4{
+    background-image: url('./../images/image4.png');
+}
+.btn{
+  border-radius: 35px !important;
+}
+ 
